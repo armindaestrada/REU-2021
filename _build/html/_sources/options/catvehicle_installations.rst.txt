@@ -6,4 +6,4 @@ Please refer to the following link for a step-by-step tutorial on installing the
 
      `CATVehicle Simulator Installations <https://jmscslgroup.github.io/catvehicle/index.html>`_
 
-.. note:: Start by installing VMWARE. Instructions are in above link. Once you have completed those installations return here. 
+.. note:: Instructions are in above link. Once you have completed those installations and you are able to visualize the catvehicle in gazebo, return here for the next installations.  
