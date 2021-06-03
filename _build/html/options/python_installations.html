@@ -168,6 +168,24 @@
 <p class="admonition-title">Warning</p>
 <p>Before installing Python make sure that you are inside the virtual machine running Ubuntu 20.04</p>
 </div>
+<p>Ubuntu 20.04 has Python 3 pre-installed. We need to make sure that the version is up to date.
+First let’s update and upgrade the system</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="o">-</span><span class="n">y</span> <span class="n">upgrade</span>
+</pre></div>
+</div>
+<p>Check the pre-installed version</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">V</span>
+</pre></div>
+</div>
+<p>To manage software packages for python install pip.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+</pre></div>
+</div>
+<p>Using pip commands you are able to install python packages. Such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">numpy</span>
+</pre></div>
+</div>
 </div>
 
 
