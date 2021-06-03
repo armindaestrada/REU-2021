@@ -202,7 +202,7 @@
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">cli</span> <span class="n">containerd</span><span class="o">.</span><span class="n">io</span>
 </pre></div>
 </div>
-<p>Add your username to a docker group and add the user to the docker group. This will be needed in order to run ::Dockers without having to type ::sudo every time at the beginning of a command.</p>
+<p>Add your username to a docker group and add the user to the docker group. This will be needed in order to run <code class="docutils literal notranslate"><span class="pre">Dockers</span></code> without having to type <code class="docutils literal notranslate"><span class="pre">sudo</span></code> every time at the beginning of a command.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo groupadd docker
 sudo usermod -aG docker $USER
 </pre></div>
@@ -211,6 +211,13 @@ sudo usermod -aG docker $USER
 <p>Verify that Docker Engine is installed correctly by running the hello-world image.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you still get a <code class="docutils literal notranslate"><span class="pre">permission</span> <span class="pre">denied</span></code> error , use the following command to activate the changes to the group.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">newgrp</span> <span class="n">docker</span>
+</pre></div>
+</div>
 </div>
 <p>Verify that the image is up and running</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span>

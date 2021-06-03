@@ -34,7 +34,7 @@ Update the apt package index, and install the latest version of Docker Engine an
     sudo apt-get update
     sudo apt-get install docker-ce docker-ce-cli containerd.io
     
-Add your username to a docker group and add the user to the docker group. This will be needed in order to run ::Dockers without having to type ::sudo every time at the beginning of a command. 
+Add your username to a docker group and add the user to the docker group. This will be needed in order to run ``Dockers`` without having to type ``sudo`` every time at the beginning of a command. 
 ::
     sudo groupadd docker
     sudo usermod -aG docker $USER
@@ -44,6 +44,11 @@ Add your username to a docker group and add the user to the docker group. This w
 Verify that Docker Engine is installed correctly by running the hello-world image.
 ::
     docker run hello-world
+
+.. note:: If you still get a ``permission denied`` error , use the following command to activate the changes to the group. 
+    ::
+        newgrp docker 
+
 
 Verify that the image is up and running
 ::
