@@ -33,11 +33,18 @@ Update the apt package index, and install the latest version of Docker Engine an
 ::
     sudo apt-get update
     sudo apt-get install docker-ce docker-ce-cli containerd.io
+    
+Add your username to a docker group and add the user to the docker group. This will be needed in order to run ::Dockers without having to type ::sudo every time at the beginning of a command. 
+::
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+
+**Close your current terminal and open a new one.**
 
 Verify that Docker Engine is installed correctly by running the hello-world image.
 ::
-    sudo docker run hello-world
+    docker run hello-world
 
 Verify that the image is up and running
 ::
-    sudo docker images
+    docker images
