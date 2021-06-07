@@ -1,7 +1,6 @@
 Dockers Installation
 ++++++++++++++++++++++
-
-Before installing Dockers, create a `Docker Hub Account <https://hub.docker.com/signup>`_ if you already don't have one. 
+Before installing Dockers, create a `Docker Hub Account <https://hub.docker.com/signup>`_
 
 Ubuntu 20.04 
 -----------------
@@ -87,3 +86,5 @@ MacOS
 13. To verify the image is up and running
 ::
     docker images
+
+    
