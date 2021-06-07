@@ -13,8 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -31,10 +29,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -89,13 +87,15 @@
               
             
             
-              <ul class="current">
+              <p class="caption"><span class="caption-text">Main</span></p>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="catvehicle_installations.html">Catvehicle Simulator Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_installations.html">Python Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matlab_installations.html">MATLAB Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Dockers Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#set-up-the-repository">Set up the repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-docker-engine">Install Docker Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu-20-04">Ubuntu 20.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-10">Windows 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macos">MacOS</a></li>
 </ul>
 </li>
 </ul>
@@ -167,14 +167,12 @@
             
   <div class="section" id="dockers-installation">
 <h1>Dockers Installation<a class="headerlink" href="#dockers-installation" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Before installing Dockers, make sure that you have created a virtual machine and are running Ubuntu 20.04.</p>
-</div>
+<p>Before installing Dockers, create a <a class="reference external" href="https://hub.docker.com/signup">Docker Hub Account</a> if you already don’t have one.</p>
+<div class="section" id="ubuntu-20-04">
+<h2>Ubuntu 20.04<a class="headerlink" href="#ubuntu-20-04" title="Permalink to this headline">¶</a></h2>
 <p>You may also visit their official site <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu</a> for more details.</p>
-<div class="section" id="set-up-the-repository">
-<h2>Set up the repository<a class="headerlink" href="#set-up-the-repository" title="Permalink to this headline">¶</a></h2>
-<p>Update the apt package index and install packages to allow apt to use a repository over HTTPS.</p>
+<dl>
+<dt>Set up the repository</dt><dd><p>Update the apt package index and install packages to allow apt to use a repository over HTTPS.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> \
 <span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span> \
@@ -194,10 +192,8 @@
 <span class="s2">$(lsb_release -cs) stable&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">list</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-docker-engine">
-<h2>Install Docker Engine<a class="headerlink" href="#install-docker-engine" title="Permalink to this headline">¶</a></h2>
-<p>Update the apt package index, and install the latest version of Docker Engine and containerd, or go to the next step to install a specific version:</p>
+</dd>
+<dt>Install Docker Engine</dt><dd><p>Update the apt package index, and install the latest version of Docker Engine and containerd, or go to the next step to install a specific version:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">cli</span> <span class="n">containerd</span><span class="o">.</span><span class="n">io</span>
 </pre></div>
@@ -207,8 +203,11 @@
 sudo usermod -aG docker $USER
 </pre></div>
 </div>
+</dd>
+</dl>
 <p><strong>Close your current terminal and open a new one.</strong></p>
-<p>Verify that Docker Engine is installed correctly by running the hello-world image.</p>
+<blockquote>
+<div><p>Verify that Docker Engine is installed correctly by running the hello-world image.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
 </pre></div>
 </div>
@@ -220,6 +219,52 @@ sudo usermod -aG docker $USER
 </div>
 </div>
 <p>Verify that the image is up and running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="windows-10">
+<h2>Windows 10<a class="headerlink" href="#windows-10" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Download installer from <a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">Install Docker Desktop on Windows</a></p></li>
+<li><p>Open and click <code class="docutils literal notranslate"><span class="pre">ok</span></code> on the configuation window to install Docker Desktop.</p></li>
+<li><p>Once all the packages have upacked, click on <code class="docutils literal notranslate"><span class="pre">Close</span> <span class="pre">and</span> <span class="pre">restart</span></code>. This will restart your computer.</p></li>
+</ol>
+<p>4. Verify that Docker Engine is installed correctly by running the hello-world image, open a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">prompt</span></code> window and run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+</pre></div>
+</div>
+<p>5. To verify the image is up and running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="macos">
+<h2>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Download installer from <a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">Install Docker Desktop on Mac</a></p></li>
+<li><p>Open the installer once downloaded and drag the icon to the applications folder as prompted. This will take several minutes.</p></li>
+<li><p>On the other pop-up click on <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">Docker</span></code>.</p></li>
+<li><p>A Verifying “Docker”… pop-up will take several minutes.</p></li>
+<li><p>Go to your applications and open <code class="docutils literal notranslate"><span class="pre">Docker</span></code>.</p></li>
+<li><p>You will get a message that states the app has been downloaded from the internet. Select <code class="docutils literal notranslate"><span class="pre">open</span></code>.</p></li>
+<li><p>Give Docker Destop priviledged access (It will ask for your password).</p></li>
+<li><p>Give it a few minutes for the Docker Engine to Initiate. On your status bar you will see the Docker icon initiating.</p></li>
+<li><p>You will see a “No containers running” message.</p></li>
+<li><p>Click on the copy icon to copy the code and run it on a terminal window. It should look something like this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">80</span><span class="p">:</span><span class="mi">80</span> <span class="n">docker</span><span class="o">/</span><span class="n">getting</span><span class="o">-</span><span class="n">started</span>
+</pre></div>
+</div>
+</li>
+<li><p>Return to the Docker Desktop Engine and you will see that there is a container.</p></li>
+<li><p>Verify that the Docker Engine is installed correctly on your terminal run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>13. To verify the image is up and running</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span>
 </pre></div>
 </div>

@@ -10,20 +10,41 @@
 
 
 CATvehicle REU 2021 Installations
-========================================================
-Please makse sure to follow the order of installations. 
-Beware that you will be creating a VM that will be used for your project. 
+++++++++++++++++++++++++++++++++++++
 
-The links below are in order of software to installations. 
+Please make sure you know what software you need to install. 
+If you are installing the CAT Vehicle simulator you will be creating a virtual environment. 
+You may skip the catvehicle installation if you will not be working with the simulator. 
+
+
 
 .. toctree::
-  
+   :caption: Main
+   :maxdepth: 1
+   :hidden:
+
 
    options/catvehicle_installations
    options/python_installations
    options/matlab_installations
    options/dockers_installations
+
+.. toctree::
+   :caption: Tutorials
+   :maxdepth: 1
+   :hidden:
+
+   .. toctree::
+   :caption: API
+   :maxdepth: 1
+   :hidden:
    
+.. toctree::
+   :caption: Example Datasets
+   :maxdepth: 1
+   :hidden:
+   
+
 Licensing
 ^^^^^^^^^^
 
