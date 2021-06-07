@@ -86,5 +86,3 @@ MacOS
 13. To verify the image is up and running
 ::
     docker images
-
-    

@@ -22,6 +22,7 @@ Using pip commands you are able to install python packages. Such as:
 ::
     pip3 install numpy
 
+
 Windows 10
 ------------
 1. Download through the `Official Python Website. <https://www.python.org/downloads/>`_
