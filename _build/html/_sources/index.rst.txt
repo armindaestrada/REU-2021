@@ -30,11 +30,6 @@ You may skip the catvehicle installation if you will not be working with the sim
    options/dockers_installations
 
 .. toctree::
-   :caption: Tutorials
-   :maxdepth: 1
-   :hidden:
-
-   .. toctree::
    :caption: API
    :maxdepth: 1
    :hidden:
