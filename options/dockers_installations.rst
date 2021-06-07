@@ -35,11 +35,14 @@ Install Docker Engine
         sudo apt-get install docker-ce docker-ce-cli containerd.io
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     Add your username to a docker group and add the user to the docker group. This will be needed in order to run ``Dockers`` without having to type ``sudo`` every time at the beginning of a command. 
     ::
         sudo groupadd docker
         sudo usermod -aG docker $USER
 =======
+=======
+>>>>>>> parent of 9008455 (dockers install modified)
 Add your username to a docker group and add the user to the docker group. This will be needed in order to run ::Dockers without having to type ::sudo every time at the beginning of a command. 
 ::
     sudo groupadd docker
@@ -57,6 +60,7 @@ Add your username to a docker group and add the user to the docker group. This w
             newgrp docker 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     Verify that the image is up and running
     ::
@@ -94,6 +98,8 @@ MacOS
         docker run hello-world
 13. To verify the image is up and running
 =======
+=======
+>>>>>>> parent of 9008455 (dockers install modified)
 Verify that the image is up and running
 >>>>>>> parent of 9008455 (dockers install modified)
 ::
