@@ -9,41 +9,50 @@ You may also visit their official site `Install Docker Engine on Ubuntu <https:/
 
 Set up the repository
     Update the apt package index and install packages to allow apt to use a repository over HTTPS.
-    .. code:: sudo apt-get update
-    .. code:: sudo apt-get install \
-    .. code:: apt-transport-https \
-    .. code:: ca-certificates \
-    .. code:: curl \
-    .. code:: gnupg \
-    .. code:: lsb-release
+    ::
+        sudo apt-get update
+        sudo apt-get install \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg \
+        lsb-release
 
     Add Docker's offical GPG key: 
-    .. code:: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    ::
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
     Use the following command to set up the stable repository. 
-    .. code:: echo \
-    .. code:: "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-    .. code:: $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    ::
+        echo \
+        "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 Install Docker Engine
     Update the apt package index, and install the latest version of Docker Engine and containerd, or go to the next step to install a specific version:
-    .. code:: sudo apt-get update 
-    .. code:: sudo apt-get install docker-ce docker-ce-cli containerd.io
+    ::
+        sudo apt-get update
+        sudo apt-get install docker-ce docker-ce-cli containerd.io
     
     Add your username to a docker group and add the user to the docker group. This will be needed in order to run ``Dockers`` without having to type ``sudo`` every time at the beginning of a command. 
-    .. code:: sudo groupadd docker
-    .. code:: sudo usermod -aG docker $USER
+    ::
+        sudo groupadd docker
+        sudo usermod -aG docker $USER
 
 **Close your current terminal and open a new one.**
 
-Verify that Docker Engine is installed correctly by running the hello-world image.
-.. code:: docker run hello-world
-.. note:: If you still get a ``permission denied`` error , use the following command to activate the changes to the group. 
-.. code::newgrp docker 
+    Verify that Docker Engine is installed correctly by running the hello-world image.
+    ::
+        docker run hello-world
+
+    .. note:: If you still get a ``permission denied`` error , use the following command to activate the changes to the group. 
+        ::
+            newgrp docker 
 
 
-Verify that the image is up and running
-.. code:: docker images
+    Verify that the image is up and running
+    ::
+        docker images
 
 Windows 10 
 -----------
@@ -51,9 +60,11 @@ Windows 10
 2. Open and click ``ok`` on the configuation window to install Docker Desktop. 
 3. Once all the packages have upacked, click on ``Close and restart``. This will restart your computer. 
 4. Verify that Docker Engine is installed correctly by running the hello-world image, open a ``command prompt`` window and run 
-    .. code:: docker run hello-world
+::
+    docker run hello-world
 5. To verify the image is up and running
-    .. code:: docker images
+::
+    docker images
 
 MacOS
 --------
@@ -67,9 +78,12 @@ MacOS
 8. Give it a few minutes for the Docker Engine to Initiate. On your status bar you will see the Docker icon initiating. 
 9. You will see a "No containers running" message. 
 10. Click on the copy icon to copy the code and run it on a terminal window. It should look something like this. 
-    .. code:: docker run -d -p 80:80 docker/getting-started
+    ::
+        docker run -d -p 80:80 docker/getting-started
 11. Return to the Docker Desktop Engine and you will see that there is a container.
 12. Verify that the Docker Engine is installed correctly on your terminal run: 
-    .. code:: docker run hello-world
+    ::
+        docker run hello-world
 13. To verify the image is up and running
-    .. code:: docker images
+::
+    docker images
